@@ -19,6 +19,7 @@ const waitForImagesToLoad = (element) => {
 };
 
  const downloadPDF = async () => {
+    console.log('kjuhgfghjik')
   const input = pdfRef.current;
 
   await waitForImagesToLoad(input);
@@ -68,7 +69,7 @@ const waitForImagesToLoad = (element) => {
             player.photo.match(/\/d\/([a-zA-Z0-9_-]+)/);
 // const url = `https://drive.google.com/uc?export=view&id=${idMatch[1]}`;
 
-          const url = `https://drive.google.com/thumbnail?id=${idMatch[1]}&sz=w400`
+          const url = `https://drive.google.com/thumbnail?id=${idMatch[1]}`
 
           return (
             <div
