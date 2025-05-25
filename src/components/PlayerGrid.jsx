@@ -90,29 +90,34 @@ console.log(imageUrl, 'imageUrlimageUrl')
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0 flex justify-center"
               >
-                <div className=" rounded-2xl shadow-xl overflow-hidden w-full max-w-sm">
-                  <div className="flex items-center justify-center pt-6 bg-gray-100 relative">
-                    <img
-                      src={imageUrl}
+                <div className=" rounded-3xlxl shadow-xl overflow-hidden w-3/4 max-w">
+
+<div
+  className={`flex items-center justify-center pt-6 relative rounded-t-2xl ${
+     'bg-gradient-to-br from-yellow-500 via-green-500 to-purple '
+  }`}
+>                    <img
+                      src={imageUrl || '/download.jpg'}
                       alt={currentPlayer.name}
-                      className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
+                      className="w-52 h-52 object-cover rounded-full border-4 border-white shadow-lg"
                      onClick={() => handleImageClick(imageUrl)}
                    />
                   </div>
 
                   {/* Player Info */}
+
                   <div className="p-6 text-center h-full flex flex-col gap-4 items-center bg-cyan-600">
                     <h3 className="text-2xl font-bold text-white mb-1">
                       Name: {currentPlayer.name}
                     </h3>
-                    <p className="text-white font-medium mb-1">
+                    <p className="text-xl text-white font-bold mb-1">
                       Position: {currentPlayer.playing_Role}
                     </p>
-                    <p className="text-white mb-4">
+                    <p className="text-xl font-bold text-white mb-4">
                       Club: {currentPlayer.club}
                     </p>
 
-                    <div className="flex justify-center space-x-4 mb-2 text-white">
+                    <div className="flex justify-center space-x-4 mb-2 text-white ext-xl font-bold">
                       <div className="flex items-center">
                         <FiPhone className="mr-2" />
                         <span>{currentPlayer.phone_Number}</span>
@@ -131,15 +136,15 @@ console.log(imageUrl, 'imageUrlimageUrl')
       className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
       onClick={() => setIsModalOpen(false)} // Close on outside click
     >
-      <motion.img
-        src={modalImage}
-        alt="Full Size"
-        className="min-w-60 min-h-min-w-60 rounded-xl shadow-2xl"
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.8 }}
-        onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking on image
-      />
+     <motion.img
+  src={modalImage}
+  alt="Full Size"
+  className="w-[30rem] h-[30rem] object-contain rounded-xl shadow-2xl"
+  initial={{ scale: 0.8 }}
+  animate={{ scale: 1 }}
+  exit={{ scale: 0.8 }}
+  onClick={(e) => e.stopPropagation()}
+/>
     </motion.div>
   )}
 </AnimatePresence>
