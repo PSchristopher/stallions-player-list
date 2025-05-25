@@ -108,6 +108,9 @@ console.log(imageUrl, 'imageUrlimageUrl')
 
                   <div className="p-6 text-center h-full flex flex-col gap-4 items-center bg-cyan-600">
                     <h3 className="text-2xl font-bold text-white mb-1">
+                      SL / NO: {currentIndex+1}
+                    </h3>
+                    <h3 className="text-2xl font-bold text-white mb-1">
                       Name: {currentPlayer.name}
                     </h3>
                     <p className="text-xl text-white font-bold mb-1">
