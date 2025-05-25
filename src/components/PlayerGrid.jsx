@@ -19,13 +19,21 @@ const handleImageClick = (imgUrl) => {
   setIsModalOpen(true);
 };
 
+  // useEffect(() => {
+  //   const filtered = players.filter(player =>
+  //     player.name.toLowerCase().includes(searchQuery.toLowerCase())
+  //   );
+  //   setFilteredPlayers(filtered);
+  //   setCurrentIndex(0);
+  // }, [searchQuery]);
+
   useEffect(() => {
-    const filtered = players.filter(player =>
-      player.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredPlayers(filtered);
-    setCurrentIndex(0);
-  }, [searchQuery]);
+  const filtered = players.filter(player =>
+    String(player.serial).includes(searchQuery)
+  );
+  setFilteredPlayers(filtered);
+  setCurrentIndex(0);
+}, [searchQuery]);
 
   const getDirectDownloadUrl = useCallback((url) => {
     console.log(url, 'urlurlurl')
@@ -108,7 +116,7 @@ console.log(imageUrl, 'imageUrlimageUrl')
 
                   <div className="p-6 text-center h-full flex flex-col gap-4 items-center bg-cyan-600">
                     <h3 className="text-2xl font-bold text-white mb-1">
-                      SL / NO: {currentIndex+1}
+                      SL / NO: {currentPlayer.serial}
                     </h3>
                     <h3 className="text-2xl font-bold text-white mb-1">
                       Name: {currentPlayer.name}
