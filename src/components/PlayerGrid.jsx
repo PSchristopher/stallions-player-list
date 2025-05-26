@@ -70,7 +70,7 @@ const handleImageClick = (imgUrl) => {
   const imageUrl = currentPlayer.photo && getDirectDownloadUrl(currentPlayer.photo);
 console.log(imageUrl, 'imageUrlimageUrl')
   return (
-    <div className="p-4">
+    <div className="p-2">
       {/* Search Bar */}
       <div className="relative mb-6">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -88,7 +88,7 @@ console.log(imageUrl, 'imageUrlimageUrl')
       {filteredPlayers.length > 0 ? (
         <div className="relative">
           {/* Carousel */}
-          <div className="relative h-[30rem]">
+          <div className="relative h-[35rem]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -98,7 +98,7 @@ console.log(imageUrl, 'imageUrlimageUrl')
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0 flex justify-center"
               >
-                <div className=" rounded-3xlxl shadow-xl overflow-hidden w-3/4 max-w">
+                <div className=" rounded-3xlxl shadow-xl overflow-hidden w-3/4 h-full max-w">
 
 <div
   className={`flex items-center justify-center pt-6 relative rounded-t-2xl ${

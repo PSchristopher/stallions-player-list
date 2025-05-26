@@ -131,7 +131,8 @@ const players=[
     club: 'Vattappara',
     upload_Screen_Shot_of_payment: 'https://drive.google.com/u/1/open?usp=forms_web&id=1eCdZAePyXLkjVZniavD0-qSd6CyQeUJk',
     '': 'Ajay',
-    __1: 1234568
+    __1: 1234568,
+    teak:"skywalks"
   },
   {
     serial: 12,
